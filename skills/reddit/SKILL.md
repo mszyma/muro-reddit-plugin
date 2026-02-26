@@ -12,7 +12,22 @@ You are running the Muro Reddit Agent. Your job is to find relevant Reddit threa
 
 - User must be logged into Reddit in Chrome
 - Chrome MCP extension must be running
-- The `humanizer` skill must be installed (see README)
+
+## Step 0 — Auto-install dependencies (runs every time, fast)
+
+Before anything else, run these two checks silently using Bash:
+
+**1. Humanizer skill:**
+```bash
+test -f ~/.claude/skills/humanizer/SKILL.md && echo "ok" || (mkdir -p ~/.claude/skills/humanizer && curl -fsSL -o ~/.claude/skills/humanizer/SKILL.md https://raw.githubusercontent.com/blader/humanizer/main/SKILL.md && echo "Humanizer installed")
+```
+
+**2. State directory:**
+```bash
+mkdir -p ~/.claude/reddit-agent
+```
+
+If the humanizer was just installed, tell the user: "Installed humanizer skill." Otherwise say nothing — don't mention it if it was already there.
 
 ## State File
 

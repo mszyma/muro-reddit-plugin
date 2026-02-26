@@ -4,52 +4,30 @@ Claude Code plugin — Reddit outreach agent for [Muro](https://usemuro.com). Fi
 
 ## Install
 
-### Step 1 — Install the humanizer dependency
-
-```bash
-mkdir -p ~/.claude/skills/humanizer
-curl -o ~/.claude/skills/humanizer/SKILL.md https://raw.githubusercontent.com/blader/humanizer/main/SKILL.md
-```
-
-### Step 2 — Add this plugin as a marketplace
-
-In Claude Code:
+Two commands. That's it.
 
 ```
 /plugin marketplace add mszyma/muro-reddit-plugin
-```
-
-### Step 3 — Install the plugin
-
-```
 /plugin install muro-reddit
 ```
 
-### Step 4 — Initialize state directory
-
-```bash
-mkdir -p ~/.claude/reddit-agent
-```
-
-The state file (`~/.claude/reddit-agent/state.json`) is created automatically on first run.
+Dependencies (humanizer skill, state directory) are installed automatically on first run.
 
 ## Usage
-
-Start a session:
 
 ```
 /muro-reddit:reddit
 ```
 
-The agent will:
-1. Report your current warm-up status across subreddits
-2. Ask which subreddits to scan
-3. Search Brave (fallback: Google) for recent threads
-4. Score and filter threads by relevance
-5. Draft replies, run each through the humanizer
-6. Show you drafts for approval (with Reddit URL on every draft)
-7. Write approved replies to `~/.claude/reddit-agent/drafts-YYYY-MM-DD.md`
-8. Update state after you confirm posts
+On first run it installs the humanizer skill automatically, then:
+1. Reports your warm-up status across subreddits
+2. Asks which subreddits to scan
+3. Searches Brave (fallback: Google) for recent threads
+4. Scores and filters threads by relevance
+5. Drafts replies, runs each through the humanizer
+6. Shows you drafts for approval (Reddit URL on every draft)
+7. Writes approved replies to `~/.claude/reddit-agent/drafts-YYYY-MM-DD.md`
+8. Updates state after you confirm posts
 
 ## Session limits
 
