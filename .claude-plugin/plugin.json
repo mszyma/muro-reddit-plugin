@@ -1,0 +1,10 @@
+{
+  "name": "muro-reddit",
+  "description": "Reddit outreach agent for Muro — finds relevant wall paint/color threads and drafts warm, human-sounding replies",
+  "version": "1.0.0",
+  "author": {
+    "name": "Mario",
+    "url": "https://usemuro.com"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,9 @@
+{
+  "plugins": [
+    {
+      "name": "muro-reddit",
+      "path": ".",
+      "description": "Reddit outreach agent for Muro — finds wall paint/color threads and drafts warm, human-sounding replies with humanizer integration"
+    }
+  ]
+}
