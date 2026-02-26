@@ -16,7 +16,7 @@ curl -o ~/.claude/skills/humanizer/SKILL.md https://raw.githubusercontent.com/bl
 In Claude Code:
 
 ```
-/plugin marketplace add YOUR_GITHUB_USERNAME/muro-reddit-plugin
+/plugin marketplace add mszyma/muro-reddit-plugin
 ```
 
 ### Step 3 — Install the plugin
